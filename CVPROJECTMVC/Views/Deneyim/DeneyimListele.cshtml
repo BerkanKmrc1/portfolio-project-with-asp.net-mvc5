@@ -1,0 +1,38 @@
+﻿@using CVPROJECTMVC.Models.Entity
+@model List<DeneyimlerTbl>
+@{
+    ViewBag.Title = "DeneyimListele";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Deneyim Düzenleme Sayfası</h2>
+<br />
+<table class="table table-bordered">
+    <br />
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>AltBaşlık</th>
+        <th>Tarih</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Title</td>
+            <td>@item.Subtitle</td>
+            <td>@item.Date</td>
+            <td><a href="/Deneyim/DeneyimSilme/@item.ID" class="btn btn-danger">SİL</a></td>
+            <td><a href="/Deneyim/DeneyimGetir/@item.ID" class="btn btn-success">GÜNCELLE</a></td>
+        </tr>
+
+    }
+
+</table>
+<a href="/Deneyim/DeneyimEkle/" class="btn btn-primary">Yeni Deneyim Ekle</a>
+
+
+
+

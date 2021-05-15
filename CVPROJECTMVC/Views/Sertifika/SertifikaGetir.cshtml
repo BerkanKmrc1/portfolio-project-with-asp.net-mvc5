@@ -1,0 +1,20 @@
+﻿@model CVPROJECTMVC.Models.Entity.SertifikalarTbl
+@{
+    ViewBag.Title = "SertifikaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<form method="post">
+    @Html.Label("Sertifika ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Sertifikayı Güncelle</button>
+</form>
+
+

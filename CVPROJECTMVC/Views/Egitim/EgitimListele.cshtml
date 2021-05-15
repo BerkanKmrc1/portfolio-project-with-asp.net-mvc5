@@ -1,0 +1,40 @@
+﻿@using CVPROJECTMVC.Models.Entity
+@model  List<EgitimlerTbl>
+
+@{
+    ViewBag.Title = "EgitimListele";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Eğitim Düzenleme Sayfası</h2>
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>AltBaşlık</th>
+        <th>AltBaşlık2</th>
+        <th>AGNO</th>
+        <th>Date</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Title</td>
+            <td>@item.Subtitle1</td>
+            <td>@item.Subtitle2</td>
+            <td>@item.AGNO</td>
+            <td>@item.Date</td>
+            <td><a href="/Egitim/EgitimSil/@item.ID" class="btn btn-danger">SİL</a></td>
+            <td><a href="/Egitim/EgitimGetir/@item.ID" class="btn btn-success">GÜNCELLE</a></td>
+        </tr>
+
+    }
+
+</table>
+<a href="/Egitim/EgitimEkle/" class="btn btn-primary">Yeni Eğitim Ekle</a>
+

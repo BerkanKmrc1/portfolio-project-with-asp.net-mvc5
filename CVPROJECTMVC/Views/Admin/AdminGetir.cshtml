@@ -1,0 +1,17 @@
+﻿@model CVPROJECTMVC.Models.Entity.AdminTbl
+
+@{
+    ViewBag.Title = "AdminGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<form method="post">
+    @Html.Label("Admin ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kullanıcı Adı")
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+    <br />
+    <br />
+    <button class="btn btn-success">Admin Güncelle</button>
+</form>
+

@@ -1,0 +1,31 @@
+﻿@model CVPROJECTMVC.Models.Entity.EgitimlerTbl
+@{
+    ViewBag.Title = "EgitimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    @Html.Label("Egitim ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("AltBaşlık")
+    @Html.TextBoxFor(x => x.Subtitle1, new { @class = "form-control" })
+    <br />
+    @Html.Label("AltBaşlık2")
+    @Html.TextBoxFor(x => x.Subtitle2, new { @class = "form-control" })
+    <br />
+    @Html.Label("Agno")
+    @Html.TextBoxFor(x => x.AGNO, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Egitimi Güncelle</button>
+</form>
+
+
+
+

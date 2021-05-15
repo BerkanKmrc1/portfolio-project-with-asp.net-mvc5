@@ -1,0 +1,20 @@
+﻿@model CVPROJECTMVC.Models.Entity.YeteneklerTbl
+@{
+    ViewBag.Title = "YetenekGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    @Html.Label("Yetenek ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yetenek Adı")
+    @Html.TextBoxFor(x => x.Workflow, new { @class = "form-control" })
+    <br />
+    @Html.Label("Oran")
+    @Html.TextBoxFor(x => x.Oran, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Yetenek Güncelle</button>
+</form>
+
+

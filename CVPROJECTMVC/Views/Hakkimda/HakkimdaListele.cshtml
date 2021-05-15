@@ -1,0 +1,42 @@
+﻿@using CVPROJECTMVC.Models.Entity
+@model List<HakkımdaTbl>
+@{
+    ViewBag.Title = "HakkimdaListele";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Hakkimda Düzenleme Sayfası</h2>
+<br />
+<form method="post">
+    @foreach (var item in Model)
+    {
+
+        <label>Ad </label>
+        <input type="Text" class="form-control" name="Name" value="@item.Name" />
+        <br />
+        <label>Soyad </label>
+        <input type="Text" class="form-control" name="Surname" value="@item.Surname" />
+        <br />
+        <label>Adres </label>
+        <input type="Text" class="form-control" name="Adress" value="@item.Adress" />
+        <br />
+        <label>Telefon</label>
+        <input type="Text" class="form-control" name="Phone" value="@item.Phone" />
+        <br />
+        <label>Mail</label>
+        <input type="Text" class="form-control" name="Mail" value="@item.Mail" />
+        <br />
+        <label>Açıklama</label>
+        <input type="Text" class="form-control" name="Description" value="@item.Description" />
+        <br />
+        <label>Foto</label>
+        <input type="Text" class="form-control" name="Photo" value="@item.Photo" />
+        <br />
+        <label>Görevi</label>
+        <input type="Text" class="form-control" name="Görevi" value="@item.Görevi" />
+        <br />
+    }
+
+    <button class="btn btn-success">Hakkımda Güncelle</button>
+</form>

@@ -1,0 +1,37 @@
+﻿@using CVPROJECTMVC.Models.Entity
+@model List<AdminTbl>
+
+@{
+    ViewBag.Title = "AdminListele";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Deneyim Düzenleme Sayfası</h2>
+<br />
+<table class="table table-bordered">
+    <br />
+    <tr>
+        <th>ID</th>
+        <th>Kullanıcı</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.KullaniciAdi</td>
+            <td><a href="/Admin/AdminGetir/@item.ID" class="btn btn-success">GÜNCELLE</a></td>
+            <td><a href="/Admin/AdminSil/@item.ID" class="btn btn-danger">SİL</a></td>
+        </tr>
+
+    }
+
+</table>
+<a href="/Admin/AdminEkle/" class="btn btn-primary">Yeni Kullanıcı Ekle</a>
+
+
+
+
+
+
